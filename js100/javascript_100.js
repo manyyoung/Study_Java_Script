@@ -58,3 +58,71 @@ console.log(!!isTrueOrFalseObj.a);  // false
 console.log(!!isTrueOrFalseObj.b);  // true
 console.log(!!isTrueOrFalseObj.c);  // false
 console.log(!!isTrueOrFalseObj.d);  // false
+
+// 7. 
+// 스타일 가이드 참고. https://www.w3schools.com/js/js_conventions.asp
+let age;
+let Age;
+// let let = 'test';  // let is disallowed as a lexically bound name. 예약어
+var let = 'test';   // 가능...;;
+let _age;
+// let 1age;
+// var 1age;
+
+// 8. 
+let d = {
+    'height':180,
+    'weight':78,
+    'weight':84,
+    'temperature':36,
+    'eyesight':1
+};
+
+console.log(d['weight']);   // 84
+
+// 9. 
+let year = '2019';
+let month = '04';
+let day = '26';
+let hour = '11';
+let minute = '34';
+let second = '27';
+
+let result = year.concat('/', month, '/', day, ' ', hour, ':' , minute, ':', second);
+
+console.log(result);
+
+// 10. * 찍기
+
+// 나무 높이
+let height = 5;
+
+// 층수만큼
+for(let i = 1; i <= height; i++) {
+    let str = '';
+
+    // 공백
+    for(let j = 1; j <= height - i ; j++) {
+        // console.log(' ');
+        str = str.concat(' ');
+    }
+    // 중간까지 *
+    for(let k = 1; k <= i ; k++) {
+        // console.log('*');
+        str = str.concat('*');
+    }
+    // 중간 이후로 *
+    for(let n = 1; n < i ; n++ ) {
+        // console.log('*');
+        str = str.concat('*');
+    }
+    // console.log('\n');
+    console.log(str);
+}
+/**
+             *
+            ***
+           *****
+          *******
+         *********
+ */
