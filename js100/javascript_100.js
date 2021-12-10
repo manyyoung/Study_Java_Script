@@ -126,3 +126,32 @@ for(let i = 1; i <= height; i++) {
           *******
          *********
  */
+
+// 11. 1 - 100 전부 더하기
+ let s = 0;
+
+ for(let i = 1 ; i <= 100 ; i++) {
+     s+= i;
+ }
+
+ console.log(s);
+
+ // 12. class 생성
+
+class Wizard {
+    constructor(health, mana, armor) {
+        this.health = health;
+        this.mana = mana;
+        this.armor = armor;
+        
+    }
+    attack() {
+        console.log('파이어볼'); 
+    }
+}
+
+const x = new Wizard(545, 210, 10);
+
+console.log(x.health, x.mana, x.armor);
+
+x.attack();
