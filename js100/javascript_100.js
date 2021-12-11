@@ -155,3 +155,46 @@ const x = new Wizard(545, 210, 10);
 console.log(x.health, x.mana, x.armor);
 
 x.attack();
+
+// 13. 
+
+let planetArr = ['수성', '금성', '지구', '화성', '목성', '토성', '천왕성', '해왕성'];
+
+let inputValue = 1;
+
+console.log(planetArr[inputValue - 1]);
+
+// 14. 3의 배수는 박수, 아니면 그냥 입력값 출력
+
+let inputValue2 = 2;
+
+if(inputValue2 % 3 === 0) {
+    console.log('짝');
+} else {
+    console.log(inputValue2)
+}
+
+// 15.
+
+let inputValue3 = '김다정'
+
+console.log(`안녕하세요. 저는 ${inputValue3}입니다.`);
+
+// 16. 
+
+let inputValue4 = '거꾸로';
+
+let reverseResult = '';
+
+for(let i = 0 ; i < inputValue4.length ; i++) {
+    reverseResult += inputValue4[inputValue4.length - i - 1];
+}
+
+console.log(reverseResult); // 로꾸거
+
+/**
+ * inputValue4.split('').reverse().join('');
+ * split() 메서드는 문자열을 배열로 만들어 반환하고,
+ * reverse() 메서드는 배열의 순서를 반전하며,
+ * join() 메서드는 원소를 모두 붙여 문자열로 반환합니다.
+ */
