@@ -198,3 +198,26 @@ console.log(reverseResult); // 로꾸거
  * reverse() 메서드는 배열의 순서를 반전하며,
  * join() 메서드는 원소를 모두 붙여 문자열로 반환합니다.
  */
+
+// 17. 놀이기구는 키가 150cm 이상만 탈 수 있습니다. 입력으로 키가 주어지면 키가 150이 넘으면 YES를 틀리면 NO를 출력하는 프로그램을 작성하세요.
+
+let inputHeight = 150;
+
+if (inputHeight < 150) {
+    console.log('NO');
+} else {
+    console.log('YES');
+}
+
+// 18. 평균 구하기. 소숫점은 버림
+
+// const scores = prompt('세 과목의 점수를 입력하세요.').split(' ');
+let language = 20;
+let math = 30;
+let english = 45;
+
+let avarage = (language + math + english) / 3;
+
+console.log(avarage);
+console.log(avarage.toFixed()); // 올림
+console.log(Math.floor(avarage));   // 버림
