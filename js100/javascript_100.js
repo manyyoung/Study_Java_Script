@@ -219,5 +219,26 @@ let english = 45;
 let avarage = (language + math + english) / 3;
 
 console.log(avarage);
-console.log(avarage.toFixed()); // 올림
+console.log(avarage.toFixed()); // 고정소숫점. 반올림
 console.log(Math.floor(avarage));   // 버림
+
+// 19. 공백으로 구분하여 두 숫자 a와 b가 주어지면, a의 b승을 구하는 프로그램
+
+let twoNumber = '3 2';
+let tempArr = twoNumber.split(' ');
+
+// parseInt 문자열에 대하여 특정 진수 값 반환. 기본 10진수가 아님.
+// console.log(parseInt(tempArr[0], 10));
+/**
+ * parseInt VS Number
+ * 문자열 중 숫자만 : 전체 문자열
+ * 참고: https://velog.io/@blackwidow/parseInt와-Number의-차이 
+ */
+console.log(Math.pow(tempArr[0], tempArr[1]));
+
+// 20. 몫, 나머지
+
+let quotient = tempArr[0] / tempArr[1];
+let remainder = tempArr[0] % tempArr[1];
+
+console.log(Math.floor(quotient), remainder);
