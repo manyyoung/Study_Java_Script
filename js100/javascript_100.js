@@ -242,3 +242,37 @@ let quotient = tempArr[0] / tempArr[1];
 let remainder = tempArr[0] % tempArr[1];
 
 console.log(Math.floor(quotient), remainder);
+
+// 21. set 만들기
+
+// let set1 = {1, 2, 3, 4, 5};
+// let set2 = {};
+let set3 = new Set('javascript');
+// let set4 = new Set(range(5));
+let set5 = new Set();
+
+console.log(set3, set5);    // Set(9) { 'j', 'a', 'v', 's', 'c', 'r', 'i', 'p', 't' } Set(0) {}
+
+// 22. 배수 여부. 
+
+// 배수는 나머지 0이면 됨
+
+// 23. console.log(10/3) 은 정수?
+
+// js에서는 소숫점 표현까지 되므로 정수를 원하면 Math.floor()를 사용한다.
+
+// 24. 전부 대문자로 표현하시오
+
+let engSmall = 'mary';
+
+console.log(engSmall.toUpperCase());
+
+// 25. 반지름 정수 n인 원 존재. 원의 넓이 구하는 function
+
+let n = 3;
+
+const circle = function (n) {
+    return n * n * 3.14;
+}
+
+console.log(circle(n));
