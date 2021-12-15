@@ -276,3 +276,83 @@ const circle = function (n) {
 }
 
 console.log(circle(n));
+
+// 26. 행성 이름 한 영 존재. 한글 입력하면 영어 이름 출력하는 프로그램 구현
+let planetList = [
+    {
+        kor: '수성',
+        eng: 'Mercury'
+    },
+    {
+        kor: '금성',
+        eng: 'Venus'
+    },
+    {
+        kor: '지구',
+        eng: 'Earth'
+    },
+    {
+        kor: '화성',
+        eng: 'Mars'
+    },
+    {
+        kor: '목성',
+        eng: 'Jupiter'
+    },
+    {
+        kor: '토성',
+        eng: 'Saturn'
+    },
+    {
+        kor: '천왕성',
+        eng: 'Uranus'
+    },
+    {
+        kor: '해왕성',
+        eng: 'Neptune'
+    }
+];
+
+const findPlanetFunc = function(kor) {
+    return planetList.find(item => item.kor === kor).eng;
+}
+
+console.log(findPlanetFunc('지구'));
+
+/*
+ 답안지 표현 
+const planets = {
+	'수성' : 'Mercury',
+	'금성' : 'Venus',
+	'지구' : 'Earth',
+	'화성' : 'Mars',
+	'목성' : 'Jupiter',
+	'토성' : 'Saturn',
+	'천왕성' : 'Uranus',
+	'해왕성' : 'Neptune',
+};
+
+console.log(planets['지구']);
+*/
+
+// 27.
+
+let inputValue5 = 'Yujin Hyewon';
+let inputValue6 = '70 100';
+let inputValue5Arr = inputValue5.split(' ');
+let inputValue6Arr = inputValue6.split(' ');
+let inputValue5_6Obj = {};
+
+inputValue5_6Obj[inputValue5Arr[0]] = inputValue6Arr[0];
+inputValue5_6Obj[inputValue5Arr[1]] = inputValue6Arr[1];
+
+console.log(inputValue5_6Obj);
+
+/**
+ * 답안
+ * 
+ * for(let i = 0 ; i < inputValue6Arr ; i++) {
+ *  inputValue5_6Obj[inputValue5Arr[i]] = inputValue6Arr[i];
+ * }
+ * 
+ */
