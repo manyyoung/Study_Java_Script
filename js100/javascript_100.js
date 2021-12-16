@@ -317,7 +317,7 @@ const findPlanetFunc = function(kor) {
     return planetList.find(item => item.kor === kor).eng;
 }
 
-console.log(findPlanetFunc('지구'));
+console.log(findPlanetFunc('지구'));    // Earth
 
 /*
  답안지 표현 
@@ -356,3 +356,34 @@ console.log(inputValue5_6Obj);
  * }
  * 
  */
+
+// 28. 2-gram
+let inputValue7 = 'javascript';
+
+for(let i = 0 ; i < inputValue7.length - 1 ; i++) {
+    console.log(inputValue7[i], inputValue7[i + 1])
+}
+
+// 29. 영 대소문자 구분
+
+let uppercase = 'A';
+let lowercase = 'b';
+
+if(uppercase.toUpperCase() === uppercase) {
+    console.log('Yes');
+} else {
+    console.log('No');
+}
+
+if(lowercase.toLowerCase() === lowercase) {
+    console.log('No');
+} else {
+    console.log('Yes');
+}
+
+// 30. 문자열속 문자 존재 여부 확인 후 인덱스
+
+let inputValue8 = 'pineapple is yummy';
+let inputValue9 = 'apple';
+
+console.log(inputValue8.indexOf(inputValue9));  // 4
