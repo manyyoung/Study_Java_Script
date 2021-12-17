@@ -387,3 +387,28 @@ let inputValue8 = 'pineapple is yummy';
 let inputValue9 = 'apple';
 
 console.log(inputValue8.indexOf(inputValue9));  // 4
+
+// 31. 배열 내장함수 시간복잡도 O(1)
+// 참고: https://nunucompany.tistory.com/29 
+// ** 별도
+
+// 32. 단어 개수 구하기
+{
+    let inputStr = '안녕하세요. 저는 제주대학교 컴퓨터공학전공 혜림입니다.';
+
+    console.log(inputStr.split(' ').length);
+}
+
+// 33. 역순출력
+{
+    let inputStr = '1 2 3 4 5';
+    let reverse = inputStr.split(' ').reverse();
+    
+    let result = '';
+
+    reverse.forEach(str => {
+        result = result.concat(`${str} `);
+    });
+
+    console.log(result);
+}
