@@ -412,3 +412,21 @@ console.log(inputValue8.indexOf(inputValue9));  // 4
 
     console.log(result);
 }
+
+// 34. sort 구현, 입력값과 sort 값 후 같은지
+
+let soltFunc = (a, b) => a - b;
+
+let tall1 = '176 156 155 165 166 169';
+
+let tall2 = tall1.split(' ').sort(soltFunc).join(' ');
+
+let tall3 = '155 156 165 166 169 176';
+
+let tall4 = tall3.split(' ').sort(soltFunc).join(' ');
+
+console.log(tall2); // 155 156 165 166 169 176
+console.log(tall1 === tall2);   // false
+
+console.log(tall4); // 155 156 165 166 169 176
+console.log(tall3 === tall4);   // true
