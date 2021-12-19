@@ -430,3 +430,35 @@ console.log(tall1 === tall2);   // false
 
 console.log(tall4); // 155 156 165 166 169 176
 console.log(tall3 === tall4);   // true
+
+// 35. Factory 함수 TODO.
+{
+function one(n) {
+    function two(value) {
+      const sq = Math.pow(value, n);
+      return sq;
+    }
+    return two;
+}
+
+  const a = one(2); // = return two;
+  const b = one(3);
+  const c = one(4);
+  
+  console.log(a(10));
+  console.log(b(10));
+  console.log(c(10));
+}
+
+// 36. 구구단 출력
+{
+    let n = 2;
+    
+    let result = [];
+
+    for(let i = 1 ; i < 10 ; i++) {
+        result.push(n * i);
+    }
+
+    console.log(result.join(' '));
+}
