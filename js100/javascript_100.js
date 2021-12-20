@@ -462,3 +462,30 @@ function one(n) {
 
     console.log(result.join(' '));
 }
+
+// 37. 반장 선거
+{
+    let inputValue = '원범 원범 혜원 혜원 혜원 혜원 유진 유진';
+    
+    let arr = inputValue.split(' ');
+
+    let tempObj = {};
+
+    for(let i = 0 ; i < arr.length ; i++) {
+        if(!tempObj[arr[i]]) {
+            tempObj[arr[i]] = 1;
+        } else {
+            tempObj[arr[i]]++;
+        }
+    }
+    console.log(tempObj);
+
+    console.log(Object.keys(tempObj));
+    
+    // 답안
+    let winner = Object.keys(tempObj).reduce((a, b) => tempObj[a] > tempObj[b] ? a : b);
+
+    console.log(winner);
+
+    console.log(`${winner}(이)가 총 ${tempObj[winner]}표로 반장이 되었습니다.`);
+}
