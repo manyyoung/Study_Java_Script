@@ -478,14 +478,42 @@ function one(n) {
             tempObj[arr[i]]++;
         }
     }
-    console.log(tempObj);
+    console.log(tempObj);   // { '원범': 2, '혜원': 4, '유진': 2 }
 
-    console.log(Object.keys(tempObj));
+    console.log(Object.keys(tempObj));  // [ '원범', '혜원', '유진' ]
     
     // 답안
     let winner = Object.keys(tempObj).reduce((a, b) => tempObj[a] > tempObj[b] ? a : b);
 
-    console.log(winner);
+    console.log(winner);    // 혜원
 
-    console.log(`${winner}(이)가 총 ${tempObj[winner]}표로 반장이 되었습니다.`);
+    console.log(`${winner}(이)가 총 ${tempObj[winner]}표로 반장이 되었습니다.`);    // 혜원(이)가 총 4표로 반장이 되었습니다.
+}
+
+// 38. 호준이의 아르바이트. 1 - 3 위 모두 몇 명?
+{
+    let values = '97 86 75 66 55 97 85 97 97 95';
+
+    let valuesArr = values.split(' ');
+
+    let valuesObj = {};
+    
+    for(let i = 0 ; i < valuesArr.length ; i++) {
+        if(!valuesObj[valuesArr[i]]) {
+            valuesObj[valuesArr[i]] = 1;
+        } else {
+            valuesObj[valuesArr[i]]++;
+        }
+    }
+    
+    console.log(valuesObj); // { '55': 1, '66': 1, '75': 1, '85': 1, '86': 1, '95': 1, '97': 4 }
+    
+    let result = [];
+
+    for(key in valuesObj) {
+        result.push({key: valuesObj[key]});
+    }
+
+    // TODO: 1 - 3인데 만약 1위만 존재하거나 1, 2 위만 존재하는 경우. index 문제
+    console.log(result.sort((a, b) => -a.key + b.key).slice(0,3).map(item => item.key).reduce((a, b) => a + b));
 }
