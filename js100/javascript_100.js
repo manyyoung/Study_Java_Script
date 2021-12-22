@@ -517,3 +517,40 @@ function one(n) {
     // TODO: 1 - 3인데 만약 1위만 존재하거나 1, 2 위만 존재하는 경우. index 문제
     console.log(result.sort((a, b) => -a.key + b.key).slice(0,3).map(item => item.key).reduce((a, b) => a + b));
 }
+
+// 39. 오타 수정하기. 모든 q를 e로 바꾸기
+{
+    let str = 'hqllo my namq is hyqwon';
+
+    const changeStr = function (str) {
+        // return str.replaceAll('q', 'e');
+        return str.replace(/q/g, 'e');
+    }
+
+    console.log(changeStr(str));
+
+    // 답안 방법
+    console.log(str.split('q').join('e'));
+}
+
+// 40. 놀이기구 무게 제한
+{
+    let limitWeight = 50;
+    
+    let howMany = 5;
+
+    // let randomWeight = [20, 20, 20, 20, 20];
+    let randomWeight = [20, 20, 20, 20, 20];
+
+    let result = 0;
+    
+    let tempWeght = 0;
+    randomWeight.forEach(item => {
+        tempWeght += item;
+        if(tempWeght <= limitWeight) {
+            result++;
+        }
+    });
+
+    console.log(result);
+}
