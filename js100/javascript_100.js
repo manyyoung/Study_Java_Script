@@ -554,3 +554,19 @@ function one(n) {
 
     console.log(result);
 }
+
+// 41. 소수 판별
+{
+    let num = 13;
+
+    let result = true;
+
+    for(let i = 2 ; i < n ; i++) {
+        if (num%i === 0) {
+            result = false;
+            break;
+        }
+    }
+
+    console.log(result ? '소수 입니다.' : '소수가 아닙니다.');
+}
