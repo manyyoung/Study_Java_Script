@@ -570,3 +570,18 @@ function one(n) {
 
     console.log(result ? '소수 입니다.' : '소수가 아닙니다.');
 }
+
+// 42. 20년 a월 b일 무슨 요일?
+{
+    let month = 5;
+
+    let date = 24;
+
+    const day = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
+
+    let nowDate = new Date(`2020-${month}-${date}`);
+
+    console.log(nowDate);   // 2020-05-23T15:00:00.000Z
+    console.log(nowDate.getDay());  // 0
+    console.log(day[nowDate.getDay()]); // SUN
+}
