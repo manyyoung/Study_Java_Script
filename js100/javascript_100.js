@@ -585,3 +585,10 @@ function one(n) {
     console.log(nowDate.getDay());  // 0
     console.log(day[nowDate.getDay()]); // SUN
 }
+
+// 43. 10진수 2진수로 
+// 참고: https://unikys.tistory.com/334  js 진법 계산
+
+let ginsu10 = 10;
+
+console.log(ginsu10.toString(2));
