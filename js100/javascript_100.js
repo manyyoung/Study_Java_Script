@@ -592,3 +592,33 @@ function one(n) {
 let ginsu10 = 10;
 
 console.log(ginsu10.toString(2));
+
+// 44. 각 자리수의 합
+{
+    let num = 18234;
+
+    let numToString = num.toString();
+
+    console.log(numToString);
+
+    let stringToArr = numToString.split('');
+
+    console.log(stringToArr);
+
+    let result = 0;
+    stringToArr.forEach(num => {
+        result += Number(num);
+    });
+
+    console.log(result);
+
+    // 답안 -> 10으로 나눈 나머지 계속 더함.
+    let sum = 0;
+
+    while(n !== 0){
+    sum += (n % 10);
+    n = Math.floor(n/10);
+    }
+
+    console.log(sum);
+}
