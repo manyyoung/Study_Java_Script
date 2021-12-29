@@ -622,3 +622,18 @@ console.log(ginsu10.toString(2));
 
     console.log(sum);
 }
+
+// 45. Date객체의 메소드 중 하나인 getTime()은 1970년 1월 1일 0시 0분 0초 이후로부터 지금까지 흐른 시간을 천분의 1초 단위(ms)로 반환합니다.
+// 현재 연도(2021)를 출력해보세요.
+
+let test = new Date();
+
+console.log(test.getTime()/1000);   // 초
+
+console.log(test.getTime()/1000/3600);   // 분
+
+console.log(test.getTime()/1000/3600/24);   // 시
+
+console.log(test.getTime()/1000/3600/24/365);   // 년 
+
+console.log(Math.floor(test.getTime()/1000/3600/24/365) + 1970);   // 현재  2022
