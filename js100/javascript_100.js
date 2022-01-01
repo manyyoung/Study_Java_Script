@@ -637,3 +637,26 @@ console.log(test.getTime()/1000/3600/24);   // 시
 console.log(test.getTime()/1000/3600/24/365);   // 년 
 
 console.log(Math.floor(test.getTime()/1000/3600/24/365) + 1970);   // 현재  2022
+
+// 46. 각자리수 합
+{
+    let startNum = 10;
+
+    let endNum = 15;
+
+    let tempStr = '';
+
+    for(let i = startNum ; i <= endNum ; i++) {
+        tempStr += i;
+    }
+
+    console.log(tempStr);   // 101112131415
+
+    let tempArr = [];
+    tempArr = tempStr.split('');
+
+    let result = tempArr.reduce((a, b) => Number(a) + Number(b), 0);
+
+    console.log(result);    // 21
+
+}
