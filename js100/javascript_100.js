@@ -660,3 +660,25 @@ console.log(Math.floor(test.getTime()/1000/3600/24/365) + 1970);   // 현재  20
     console.log(result);    // 21
 
 }
+
+// 47. set 자료형 응용. 중복 제거. 실제 접수 인원은?
+{  
+    const people = {
+        이호준: "01050442903",
+        이호상: "01051442904",
+        이준호: "01050342904",
+        이호준: "01050442903",
+        이준: "01050412904",
+        이호: "01050443904",
+        이호준: "01050442903"
+      };
+      
+      console.log(people);
+ 
+      let keys = Object.keys(people);
+      
+      console.log(keys);    // [ '이호준', '이호상', '이준호', '이준', '이호' ]
+
+      console.log(keys.length);
+
+}
