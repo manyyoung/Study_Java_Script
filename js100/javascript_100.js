@@ -682,3 +682,67 @@ console.log(Math.floor(test.getTime()/1000/3600/24/365) + 1970);   // 현재  20
       console.log(keys.length);
 
 }
+
+// 48. 대소문자 바꿔 출력
+{
+    // 대문자
+    let _regex1 = /^[A-Z]$/;
+
+    // 소문자
+    let _regex2 = /^[a-z]$/;
+
+    let str = 'AAABBBcccddd';
+
+    let _result = '';
+
+    for(let i = 0 ; i < str.length ; i++) {
+        if (_regex1.test(str[i])) {
+            _result += str[i].toLowerCase();
+        } else {
+            _result += str[i].toUpperCase();
+        }
+    }
+
+    console.log(_result);   // aaabbbCCCDDD
+
+    // 답안
+    let a = 'AAABBBcccddd';
+    let b = [];
+    let s = '';
+
+    for (let i=0; i<a.length; i++){
+        //toLowerCase() 메서드는 문자열을 소문자로, toUpperCase() 메서드는 문자열을 대문자로 변환하여 반환합니다.
+    if(a[i] === a[i].toLowerCase()){ 
+        b.push(a[i].toUpperCase());
+    } else {
+        b.push(a[i].toLowerCase());
+    }
+    }
+
+    for (let j=0; j<b.length; j++){
+    s += b[j];
+    }
+
+}
+
+// 49. 최댓값 구하기
+{
+    let str = '10 9 8 7 6 5 4 3 2 1';
+
+    let strArr = str.split(' ');
+
+    console.log(strArr);
+
+    console.log(Math.max(...strArr));   // 10
+
+    // 답안
+    let numbers = prompt('10개의 숫자를 입력하세요').split(' ').map((n) => {
+        return parseInt(n, 10);
+    });
+    
+    numbers.sort((a, b) => {
+    return b-a;
+    });
+    
+    console.log(numbers[0]);
+}
