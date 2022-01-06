@@ -736,13 +736,44 @@ console.log(Math.floor(test.getTime()/1000/3600/24/365) + 1970);   // 현재  20
     console.log(Math.max(...strArr));   // 10
 
     // 답안
-    let numbers = prompt('10개의 숫자를 입력하세요').split(' ').map((n) => {
-        return parseInt(n, 10);
-    });
+    // let numbers = prompt('10개의 숫자를 입력하세요').split(' ').map((n) => {
+    //     return parseInt(n, 10);
+    // });
     
-    numbers.sort((a, b) => {
+    strArr.sort((a, b) => {
     return b-a;
     });
     
-    console.log(numbers[0]);
+    console.log(strArr[0]);
+}
+
+// 50. 버블 정렬 구하기. 빈칸 채우기 (버블 정렬이란 인접한 배열)
+{
+function bubble(arr) {
+    let result = arr.slice(); 
+
+    for (let i = 0; i < result.length - 1; i++) {
+        // 빈칸을 채워주세요 (for문 조건)
+        for (let j = 0 ; j < result.length - 1 - i ; j++) {
+            if (result[j] > result[j + 1]) {
+                //빈칸을 채워주세요.
+                let temp = result[j + 1];
+                result[j + 1] = result[j];
+                result[j] = temp;
+            }
+        }
+    }
+        return result;
+    }
+
+    // const items = prompt('입력해주세요.').split(' ').map((n) => {
+    //     return parseInt(n, 10);
+    // });
+
+    const items = [4, 2, 3, 8, 5];
+
+    console.log(bubble(items)); // [ 2, 3, 4, 5, 8 ]
+
+    // 답안 
+    // for 조건 for (let j = 0; j < result.length - i; j++)
 }
