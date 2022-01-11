@@ -914,3 +914,49 @@ function mergeSort(arr){
         console.log('NO');
     }
 }
+
+// 54. 연속된 수 여부 체크
+{
+    let inputStr = '1 2 3 4 5';
+
+    let inputStr2 = '1 4 2 6 3';
+
+    let inputArr = inputStr.split(' ');
+
+    let input2Arr = inputStr2.split(' ');
+
+    console.log(inputArr);
+    console.log(input2Arr)
+
+    const numCheck = function (arr) {
+        let _result = true;
+        for(let i = 0 ; i < arr.length - 1 ; i++) {
+            if(Math.abs(Number(arr[i]) - Number(arr[i + 1])) !== 1) {
+                _result = false;
+                break;
+            }
+        }
+
+        return _result;
+    }
+
+    console.log(numCheck(inputArr));
+    console.log(numCheck(input2Arr));
+
+    // 답안
+    // 답안에서 말하는 연속된 수란 내부적 순서는 상관이 없음.
+    function sol(l){
+        l.sort((a,b) => {
+          return a-b;
+        });
+      
+        for (let i=0; i<l.length-1; i++){
+          if(l[i]+1 !== l[i+1]){
+            return 'NO';
+          }
+        }
+        return 'YES';
+      }
+      
+      console.log(sol(inputArr));
+}
