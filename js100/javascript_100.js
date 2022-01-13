@@ -976,7 +976,6 @@ function mergeSort(arr){
     모든 원반을 옮기기 위해 실행되어야 할 최소 원반 이동 횟수를 계산하는 프로그램을 완성해 주세요.
  */
 {
-    // TODO
     const route = [];
 
     function hanoi(num, start, end, temp){
@@ -987,11 +986,11 @@ function mergeSort(arr){
     }
 
     //원반이 n-1개를 경유기둥으로 옮기고
-    hanoi(/*내용을 채워주세요.*/);
+    hanoi(num-1, start, temp, end);
     //가장 큰 원반은 목표기둥으로
-    route.push(/*내용을 채워주세요.*/);
+    route.push([start, end]);
     //경유기둥과 시작기둥을 바꿉니다.
-    hanoi(/*내용을 채워주세요.*/);
+    hanoi(num-1, temp, end, start);
     }
 
     hanoi(3, 'A', 'B', 'C');
