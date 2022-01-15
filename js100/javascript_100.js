@@ -997,3 +997,15 @@ function mergeSort(arr){
     console.log(route);
     console.log(route.length);
 }
+
+// 56. 한국의 면적과 가장 비슷한 국가와 그 차이를 출력하세요.
+{
+    nationWidth = {
+        'korea': 220877,
+        'Rusia': 17098242,
+        'China': 9596961,
+        'France': 543965,
+        'Japan': 377915,
+        'England' : 242900,
+    }
+}
