@@ -1008,4 +1008,49 @@ function mergeSort(arr){
         'Japan': 377915,
         'England' : 242900,
     }
+
+    let tempKor = nationWidth['korea'];
+
+    let keys = Object.keys(nationWidth);
+
+    console.log(keys);
+
+    let tempNum = 0;
+
+    for(nation of keys) {
+
+        if (Math.abs(nationWidth[nation] - nationWidth['korea']) === 0) {
+            // 동일 국가
+        }else if (tempNum === 0) {
+            tempNum = nationWidth[nation];
+        } else if(Math.abs(nationWidth[nation] - nationWidth['korea']) < Math.abs(tempNum - nationWidth['korea'])) {
+            tempNum = nationWidth[nation];
+        }
+    }
+
+    console.log(tempNum);   // 242900
+
+    console.log(keys.find(item => nationWidth[item] === tempNum));  // England
+
+    // 답안
+    const w = nationWidth['korea'];
+
+    delete nationWidth['korea'];
+
+    const entry = Object.entries(nationWidth);
+    const values = Object.values(nationWidth);
+
+    //gap에 최댓값 저장
+    let gap = Math.max.apply(null, values);
+    let item = [];
+
+    for (let i in entry){
+        if (gap > Math.abs(entry[i][1] - w)){
+            gap = Math.abs(entry[i][1] - w);
+            item = entry[i];
+        }
+    }
+
+    console.log(item[0], item[1] - w);
+
 }
