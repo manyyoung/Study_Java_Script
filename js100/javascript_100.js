@@ -1139,4 +1139,21 @@ function mergeSort(arr){
     let str = num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
     console.log(str);
+
+    // 답안
+    // 내장함수 사용
+    console.log(num.toLocaleString());
+
+    // 재귀함수 사용
+    function comma(s) {
+    if (s.length <= 3) {
+        return s;
+    } else {
+        return comma(s.slice(0, s.length - 3)) + ',' + s.slice(s.length - 3);
+    }
+    }
+
+    console.log(comma(num));
 }
+
+// 59. 총 문자열의 길이는 50으로 제한하고 사용자가 문자열을 입력하면 그 문자열을 가운데 정렬을 해주고, 나머지 빈 부분에는 '='을 채워 넣어주세요.
