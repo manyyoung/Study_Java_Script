@@ -1145,7 +1145,7 @@ function mergeSort(arr){
     console.log(num.toLocaleString());
 
     // 재귀함수 사용
-    function comma(s) {
+    function comma(s = []) {
     if (s.length <= 3) {
         return s;
     } else {
@@ -1153,7 +1153,44 @@ function mergeSort(arr){
     }
     }
 
-    console.log(comma(num));
+    // console.log(comma(num));
 }
 
 // 59. 총 문자열의 길이는 50으로 제한하고 사용자가 문자열을 입력하면 그 문자열을 가운데 정렬을 해주고, 나머지 빈 부분에는 '='을 채워 넣어주세요.
+{
+    const strLength = 50;
+
+    let inputStr = '567';
+
+    let frontStrLength = Math.floor((50 - inputStr.length) / 2);
+    // let backStr = strLength - inputStr.length - frontStr;
+
+    let _result = '';
+
+    for(let i = 0 ; i < frontStrLength; i++) {
+        _result += '='
+    }
+    _result += inputStr;
+
+    for(let i = _result.length ; i < strLength; i++) {
+        _result += '='
+    }
+
+    console.log(_result);   // =======================567========================
+
+    console.log(_result.length);   // 50
+
+    // 답안
+    const str = '567';
+
+    const n = 25 + parseInt((str.length/2), 10);
+
+    //왼쪽부터 채우기
+    const a = str.padStart(n, '='); 
+
+    //오른쪽까지 채워서 출력
+    console.log(a.padEnd(50, '='));
+
+    //padStart(길이, 채울 문자열) : 주어진 길이만큼 원래 문자열의 왼쪽부터 주어진 문자열로 채움
+    //padEnd(길이, 채울 문자열) : 주어진 길이만큼 원래 문자열의 오른쪽부터 주어진 문자열로 채움
+}
