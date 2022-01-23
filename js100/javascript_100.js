@@ -1212,3 +1212,33 @@ function mergeSort(arr){
     
     console.log(result);
 }
+
+// 61. 문자열 압축하기
+// 문자열을 입력받고 연속되는 문자열을 압축해서 표현하고 싶습니다.
+{
+    let inputValue = 'aaabbbbcdddd';
+
+    let inputValueArr = inputValue.split('');
+
+    let obj = {};
+
+    for (val of inputValueArr) {
+        if (obj[val] !== undefined) {
+            obj[val]++;
+        } else {
+            obj[val] = 1;
+        }
+    }
+
+    console.log(obj);   // { a: 3, b: 4, c: 1, d: 4 }
+
+    let keys = Object.keys(obj);
+
+    let result = '';
+
+    for (key of keys) {
+        result += key + obj[key];
+    }
+
+    console.log(result);    // a3b4c1d4
+}
