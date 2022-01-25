@@ -1268,3 +1268,23 @@ function mergeSort(arr){
 
     console.log(`${user_s.match(/a/g).length}${Number(user_s.match(/b/g))}${user_s.match(/c/g).length}${user_s.match(/d/g).length}${Number(user_s.match(/e/g))}${user_s.match(/f/g).length}${user_s.match(/g/g).length}${user_s.match(/h/g).length}`);
 }
+
+// 63. 줄임말 만들기
+{
+    let inputValue = '복잡한 세상 편하게 살자';
+
+    let inputValueArr = inputValue.split(' ');
+
+    let _result = '';
+    for(val of inputValueArr) {
+        _result += val[0];
+    }
+
+    console.log(_result);   // 복세편살
+
+    // 답안
+    let result = '';
+    for (let s of inputValueArr){
+        result += s.slice(0, 1);
+    }
+}
